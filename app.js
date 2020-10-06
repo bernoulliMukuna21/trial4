@@ -6,8 +6,7 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 let MongoClient = require('mongodb').MongoClient;
 
-let mongoURI = 'mongodb://localhost:27017/excellence';
-
+let mongoURI = process.env.MONGODB_URI|| 'mongodb://localhost:27017/excellence';
 
 mongoose
     .connect(
