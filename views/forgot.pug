@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    form.password-forgot(method='POST')
+        h1 Forgot Password
+        include partials/form_message
+        .password-forgot-first-section
+            input(type='text', name='email', autofocus, placeholder='Type Your Email')
+            button(type='submit') Send Email

@@ -1,0 +1,32 @@
+- if(typeof fields_errors != 'undefined'){
+    each error in fields_errors
+        p.error-message #{error.message} #[br]
+-}
+
+- if(success_message !== ''){
+    p.success-message(style='text-align: center; color: green; font-weight: bold;') #{success_message}
+-}
+
+- if(error_message !== ''){
+    p.error_message(style='text-align: center; color: red; font-weight: bold;') #{error_message}
+-}
+
+- if(error !== ''){
+    p.error(style='font-weight: bold;') #{error}
+-}
+
+
+script.
+    $('.success-message, .error').show().delay(5000).fadeOut();
+
+style.
+    .error-message{
+        color: black;
+        text-align: center;
+        font-weight: bolder;
+        font-size: 1.5rem;
+        padding: 1rem;
+        border-radius: 5rem;
+        margin-bottom: 1rem;
+        background-color: #f59999;
+    }

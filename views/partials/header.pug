@@ -1,0 +1,18 @@
+- side_nav_list = []
+- function main_nav(name, link) { return {name: name, link: link}}
+
+// The names and links of the side navigation bar
+- side_nav_list.push(main_nav('Account', '/users/account'))
+- side_nav_list.push(main_nav('Join Free', '/users/join'))
+- side_nav_list.push(main_nav('Login', '/users/login'))
+header
+    div.top-container
+        h1.web-title: a(href='#') Excellence
+            bolder .
+            |Freelance
+        div.top-navbar
+            each item in side_nav_list
+                a(href=item.link): button(class='nav-btn') #{item.name}
+
+
+

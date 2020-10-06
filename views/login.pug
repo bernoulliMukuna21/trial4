@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    form.login(action='/users/login', method='POST')
+        include partials/form_message
+        input(name='email', type='email', placeholder='Email')
+        input(name='password', type='password', placeholder='Password')
+        button(type='submit') Login
+        section
+            a(href='/users/join') Don't Have an Account?
+            a(href='/users/forgot') Forgotten Password?

@@ -1,0 +1,284 @@
+extends layout
+
+block content
+    div.main-account-page
+        div.account-left-bar
+            div.account-profile-details
+                div.account-profile-image
+                    img(src='/images/profile_image.png')
+                p.account-profile-name Lauren
+                p.account-profile-service Influencer
+                div.public-service-enquiry
+                    a(href='#'): button(class='book-btn') Book
+                    a(href='#'): button(id='enquire-btn') Enquire
+                div.account-profile-information
+                    ul
+                        li.user-main-page(class='clicked') Main Page
+                        li.user-update-page Update Personal Information
+                        li.user-current-booking-page Current Bookings
+                        li.user-completed-booking-page Completed Bookings
+        div.account-main-side
+            //- This is the code for the main profile page of the user
+            .main-page(style='display:show;')
+                div.account-first-side
+                    h1 About Me
+                    p
+                        | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                        | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                div.account-second-side
+                    div.user-account-skills
+                        h1 Skills
+                        div.each-skill
+                            section
+                                p Dancing
+                                span(style='width: 75%; background-color: #24cfbc; color: white; text-align: center;') 75%
+                            section
+                                p Running
+                                span(style='width: 25%; background-color: #cd86e7; color: white; text-align: center;') 25%
+                            section
+                                p Flying
+                                span(style='width: 100%; background-color: #c15097; color: white; text-align: center;') 100%
+                            section
+                                p Walking
+                                span(style='width: 90%; background-color: #70250e; color: white; text-align: center;') 90%
+                            section
+                                p sleeping
+                                span(style='width: 10%; background-color: #274e11; color: white; text-align: center;') 10%
+                    div.price-information
+                        p
+                            | Minimum Price at #{' '}
+                            i(style='text-decoration: underline') £8.90
+                div.account-second-middle-side
+                    h1 Education
+                    section.each-education
+                        p Master of Science in Data Analytics
+                        p University of Sheffield
+                        p Year: 2018 - 2019
+                    section.each-education
+                        p Master of Science in Data Analytics
+                        p University of Sheffield
+                        p Year: 2018 - 2019
+                div.account-third-side
+                    h1 Portfolio
+                    div.image-portfolio
+                        img(src='/images/eF1.jpg')
+                        img(src='/images/eF2.jpg')
+                        img(src='/images/eF3.jpg')
+                        img(src='/images/eF4.jpg')
+                        img(src='/images/eF5.jpg')
+                        img(src='/images/eF6.jpg')
+                        img(src='/images/eF7.jpg')
+                        img(src='/images/profile_image.png')
+                        img(src='/images/Jojo.jpg')
+                        img(src='/images/eF2.jpg')
+                        img(src='/images/eF3.jpg')
+                div.account-fourth-side
+                    h1 All Reviews
+                    div.written-reviews
+                        section.user-single-review
+                            section.reviewer-identity
+                                img(src='/images/Jojo.jpg' style='width:5rem; height:5rem')
+                                p Debbie Lambanot
+                            section.review-content
+                                section.section-one
+                                    p Rating: 3.5/5
+                                    p Agree: 1000
+                                    p Disagree: 10
+                                section.section-two
+                                    p.user-account-reviews Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                                section.section-three
+                                    button.dislike
+                                        i.far.fa-thumbs-up(aria-hidden='true')
+                                    button.like
+                                        i.far.fa-thumbs-down(aria-hidden='true')
+                    div.user-write-review
+                        section.user-review-section
+                            textarea.user-write-review-area(placeholder='Write a Review...')
+                            select.review-rate(name='star-rate')
+                                option(value='star-rating') Enter a Rating
+                                option(value='one') 1
+                                option(value='one-half') 1.5
+                                option(value='two') 2
+                                option(value='two-half') 2.5
+                                option(value='three') 3
+                                option(value='three-half') 3.5
+                                option(value='four') 4
+                                option(value='four-half') 4.5
+                                option(value='five') 5
+                        section.review-submit-section
+                            button(id='user-review-submission') Submit Review
+
+            .update-page(style='display:none;')
+                //- The code for the information update of the user go here below
+                h1 Update Personal Information
+                p Setup your general profile details.
+
+                .update-general-information
+                    //- Name and Other General Use Information update
+                    h3 Name and other General Information
+                    .user-general-information-one
+                        .general-information-section-one
+                            label(for='name') Name: #[br]
+                            input(id='name',type='text',placeholder='Enter Name',name='name',value='', required)
+
+                            label(for='email') #[br] Email Address: #[br]
+                            input(id='email',type='email',placeholder='Enter Email',name='email',value='', required)
+                        .general-information-section-two
+                            label(for='username') Username: #[br]
+                            input(id='username',type='text',placeholder='Enter Username',name='username',value='', required)
+
+                            label(for='phone-number') #[br] Phone Number: #[br]
+                            input(id='phone-number',type='tel',placeholder='Enter Phone Number',name='phone-number',value='', required)
+                        .general-information-section-three
+                            label Profile Picture
+                            .file-image-area
+                                .file-image-upload
+                                    //img(src='/images/eF1.jpg' style='width: 30vh; height: 30vh;') => Image container
+                                .file-image-upload-btn
+                                    button
+                                        i.fas.fa-cloud-upload-alt
+                                        | Upload Image
+                    .user-general-information-two
+                        //- Password Update section
+                        h3 Change your Password
+                        .git-password-update-section
+                            .git-old-password
+                                label(for='old-password') Old Password #[br]
+                                input(id='old-password',type='text',placeholder='Old Password',name='o-password',value='', required)
+                            .git-new-password
+                                label(for='new-password') Old Password #[br]
+                                input(id='new-password',type='text',placeholder='New Password',name='n-password',value='', required)
+                            .git-new-repeat-password
+                                label(for='new-repeat-password') Old Password #[br]
+                                input(id='new-repeat-password',type='text',placeholder='Repeat New Password',name='n-r-password',value='', required)
+
+                    .user-general-information-three
+                        h3 Education
+                        .user-education
+                            input#Schoolname.form-control(type='text', name='Schoolname[]', value='', placeholder='University or College Name')
+                            input#Major.form-control(type='text', name='Degree_Qualification[]', value='', placeholder='Degree Qualification')
+                            input#Degree.form-control(type='text', name='Degree[]', value='', placeholder='Degree Name')
+                            .user-education-years
+                                select#educationDateStart.form-control(name='educationDate[]')
+                                    option(value='') Year
+                                    option(value='2015') 2015
+                                    option(value='2016') 2016
+                                    option(value='2017') 2017
+                                    option(value='2018') 2018
+                                select#educationDateEnd.form-control(name='educationDate[]')
+                                    option(value='') Year
+                                    option(value='2015') 2015
+                                    option(value='2016') 2016
+                                    option(value='2017') 2017
+                                    option(value='2018') 2018
+                                button.input-group-btn: i.fas.fa-plus-square
+
+                        .user-bio-description-skills
+                            h3 Description and skills
+                            .user-bio-description-skills-container
+                                .user-bio-description-skills-one
+                                    label Description #[br]
+                                    textarea(placeholder='Write your Description...')
+                                .user-bio-description-skills-two
+                                    label Skills #[br]
+                                    .user-bio-description-skills-two-container
+                                        input#user-update-skills(type='text', name='Skills[]', value='', placeholder='Enter Skills')
+                                        button: i.fas.fa-plus-square
+                    .update-page-submit
+                        button(id='update-page-submission') Submit Review
+            .current-booking-page(style='display:none;')
+                //- Current booking of the user is done in this section
+                p(style='font-size: 2rem; font-weight: bolder; color: violet;') This is the current booking page
+
+            .completed-booking-page(style='display:none;')
+                //- Bookings completed are done here
+                p(style='font-size: 2rem; font-weight: bolder; color: orange;') This is the booking completed page
+
+        //
+            div.account-first-side
+                h1 About Me
+                p
+                    | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                    | Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+            div.account-second-side
+                div.user-account-skills
+                    h1 Skills
+                    div.each-skill
+                        section
+                            p Dancing
+                            span(style='width: 75%; background-color: #24cfbc; color: white; text-align: center;') 75%
+                        section
+                            p Running
+                            span(style='width: 25%; background-color: #cd86e7; color: white; text-align: center;') 25%
+                        section
+                            p Flying
+                            span(style='width: 100%; background-color: #c15097; color: white; text-align: center;') 100%
+                        section
+                            p Walking
+                            span(style='width: 90%; background-color: #70250e; color: white; text-align: center;') 90%
+                        section
+                            p sleeping
+                            span(style='width: 10%; background-color: #274e11; color: white; text-align: center;') 10%
+                div.price-information
+                    p
+                        |Minimum Price at #{' '}
+                        i(style='text-decoration: underline') £8.90
+            div.account-second-middle-side
+                h1 Education
+                section.each-education
+                    p Master of Science in Data Analytics
+                    p University of Sheffield
+                    p Year: 2018 - 2019
+                section.each-education
+                    p Master of Science in Data Analytics
+                    p University of Sheffield
+                    p Year: 2018 - 2019
+            div.account-third-side
+                h1 Portfolio
+                div.image-portfolio
+                    img(src='/images/eF1.jpg')
+                    img(src='/images/eF2.jpg')
+                    img(src='/images/eF3.jpg')
+                    img(src='/images/eF4.jpg')
+                    img(src='/images/eF5.jpg')
+                    img(src='/images/eF6.jpg')
+                    img(src='/images/eF7.jpg')
+                    img(src='/images/profile_image.png')
+                    img(src='/images/Jojo.jpg')
+                    img(src='/images/eF2.jpg')
+                    img(src='/images/eF3.jpg')
+            div.account-fourth-side
+                h1 All Reviews
+                div.written-reviews
+                    section.user-single-review
+                        section.reviewer-identity
+                            img(src='/images/Jojo.jpg' style='width:5rem; height:5rem')
+                            p Debbie Lambanot
+                        section.review-content
+                            section.section-one
+                                p Rating: 3.5/5
+                                p Agree: 1000
+                                p Disagree: 10
+                            section.section-two
+                                p.user-account-reviews Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.
+                            section.section-three
+                                button.dislike
+                                    i.far.fa-thumbs-up(aria-hidden='true')
+                                button.like
+                                    i.far.fa-thumbs-down(aria-hidden='true')
+                div.user-write-review
+                    section.user-review-section
+                        textarea.user-write-review-area(placeholder='Write a Review...')
+                        select.review-rate(name='star-rate')
+                            option(value='star-rating') Enter a Rating
+                            option(value='one') 1
+                            option(value='one-half') 1.5
+                            option(value='two') 2
+                            option(value='two-half') 2.5
+                            option(value='three') 3
+                            option(value='three-half') 3.5
+                            option(value='four') 4
+                            option(value='four-half') 4.5
+                            option(value='five') 5
+                    section.review-submit-section
+                        button(id='user-review-submission') Submit Review

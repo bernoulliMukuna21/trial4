@@ -1,0 +1,552 @@
+.main-account-page{
+    display: flex;
+    color: black;
+    font: 1rem "Lucida Grande", Helvetica, Arial, sans-serif;
+    /*background:#e9ecf3;*/
+}
+/************************************************************************************************************************
+************************************************************************************************************************
+****************************************      Main Profile   *************************************************/
+.account-left-bar{
+    flex: 1;
+    margin: 1rem 1rem 1rem 5rem;
+}
+/*######## Account Profile ######*/
+.account-profile-image img{
+    display: block;
+    margin: 0 auto;
+    border: .1rem dashed black;
+    height: 30vh;
+    width: 30vh;
+}
+
+.account-profile-name, .account-profile-service{
+    text-align: center;
+    margin: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.account-profile-service{
+    text-transform: uppercase;
+    font-family: "Times New Roman", Times, serif;
+    color: #213e53; /* #198a85  */
+    border-bottom: .1rem solid #213e53;
+}
+
+.public-service-enquiry {
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.public-service-enquiry button{
+    background-color: #213e53;
+    color: white;
+    border: .1rem solid #213e53;
+    cursor: pointer;
+    margin: 1rem 0.25rem 2rem 0.25rem;
+    padding: 1rem 0;
+    width: 15vh;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.public-service-enquiry .book-btn:hover{
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+/*######### Account Information #########*/
+.account-profile-information{
+    margin: 0 1rem;
+}
+
+.account-profile-information ul{
+    list-style-type: none;
+}
+
+.account-profile-information li{
+    font-size: 1.5rem;
+    border-bottom: .1rem solid #213e53;
+    padding: 1rem;
+}
+
+.account-profile-information li:nth-child(1){
+    border-top: .1rem solid #213e53;
+}
+
+.account-profile-information li:hover{
+    cursor: pointer;
+    background-color: #213e53;
+    color: #ffffff;
+}
+
+.clicked{
+    background-color: #213e53;
+    color: white;
+}
+
+/*===========================================================================================================================================*/
+/*
+***************** Main Side => Main Information of the user
+*/
+.account-main-side{
+    flex: 3;
+    margin: 1rem 5rem 1rem 1rem;
+}
+
+/*~~ First-box of main side~~*/
+.account-first-side{
+    border-bottom: .1rem solid #213e53;
+    display: flex;
+    flex-direction: column;
+}
+
+.account-first-side h1, .user-account-skills h1, .price-information h1, .account-third-side h1, .account-fourth-side h1,
+.account-second-middle-side h1, .update-page h1{
+    width: max-content;
+    padding-bottom: .25rem;
+    color: #213e53;
+    border-bottom: .25rem solid #213e53;
+}
+
+.account-first-side p{
+    font-size: 1.5rem;
+    text-justify: inter-word;
+    -ms-text-justify: inter-word;
+    margin: 1rem;
+}
+
+/*~~ Second Box of the main Side~~*/
+.account-second-side{
+    display: flex;
+    flex-direction: row;
+}
+/*~~~~User Account Skills~~~~~~~*/
+.user-account-skills h1{
+    color: white;
+    border-bottom: .25rem solid white;
+}
+
+.user-account-skills, .price-information{
+    flex: 1;
+    background-color: #213e53;
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+/*
+.each-skill{
+    border: .1rem solid black;
+}
+*/
+.each-skill section{
+    margin: .5rem 0;
+    display: grid;
+    grid-template-columns: 15% 85%;
+    font-size: 1.2rem;
+    background-color: white;
+    font-weight: bold;
+}
+.each-skill section p{
+    align-self: center;
+    background-color: #213e53;
+    border: .1rem solid #213e53;
+    padding: .25rem;
+    color: white;
+}
+
+/* Price Information */
+.price-information{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-information p{
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+/*~~~~~ Second-middle~~~~~*/
+.account-second-middle-side{
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: .1rem solid #213e53;
+}
+
+.each-education{
+    margin-top: 1rem;
+}
+
+.each-education p{
+    font-size: 1.5rem;
+}
+
+.each-education p:first-child{
+    font-weight: bolder;
+}
+
+/*~~ Third Box of the main Side~~*/
+.account-third-side{
+    border-top: .1rem solid #213e53;
+    padding: 1rem 0;
+}
+.account-third-side h1{
+    margin-bottom: 1rem;
+}
+
+.image-portfolio{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    column-gap: .5%;
+    row-gap: .1%;
+    border: .1rem solid white;
+    grid-auto-flow: row;
+}
+
+.image-portfolio img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: .1rem solid #213e53;
+}
+
+/*~~ Fourth Box of the main Side~~*/
+.account-fourth-side{
+    /*margin-top: 10rem;*/
+    border-top: .5rem solid #213e53;
+    padding-top: 1rem;
+    margin: 10rem 25% 1rem 1rem;
+}
+
+.user-single-review{
+    border-top: .1rem solid #213e53;
+    display: grid;
+    grid-template-columns: 10% 90%;
+    padding: 1rem;
+}
+
+.user-single-review:first-child{
+    border-top: none;
+    border-bottom: .1rem solid #213e53;
+}
+
+
+.reviewer-identity{
+    text-align: center;
+    padding-right: 1rem;
+}
+.reviewer-identity img{
+    border-radius: 50%;
+}
+.reviewer-identity p{
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #213e53;
+}
+
+.review-content{
+    padding-left: 1rem;
+}
+.section-one{
+    display: flex;
+}
+
+.section-one p{
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #213e53;
+}
+.section-one p:nth-child(2), .section-one p:nth-child(3){padding-left: 1rem;}
+
+.user-account-reviews{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.section-three{
+    display: flex;
+    justify-content: end;
+}
+
+button.like, button.dislike{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-width: 1px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button.dislike{
+    color: rgba(0,150,136 ,1);
+    background-color:rgba(38,166,154 ,0.3);
+    border-color: rgba(0,150,136 ,1);
+    margin: 0 .5rem;
+}
+
+button.like{
+    color: rgba(255,82,82 ,1);
+    background-color: rgba(255,138,128 ,0.3);
+    border-color: rgba(255,82,82 ,1);
+}
+
+.user-write-review{
+    margin-top: 5rem;
+}
+.user-write-review-area{
+    width: 100%;
+    height: 10vh;
+    border: .1rem solid #213e53;
+    box-shadow: 0 1px 0 0 #213e53;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/*##################################################################################################################*/
+.review-rate {
+    margin: 1rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: .6em 1.4em .5em .8em;
+    border: 1px solid #213e53;
+    box-shadow: 0 1px 0 1px rgba(0,0,0,.04);
+    border-radius: .5em;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+    linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+.review-rate::-ms-expand {
+    display: none;
+}
+
+.review-rate:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px #213e53;
+    color: #213e53;
+    outline: none;
+}
+.review-rate option {
+    font-weight: bold;
+}
+/*##################################################################################################################*/
+
+.review-submit-section{
+    margin: 1rem;
+    width: 100%;
+}
+.review-submit-section button, .update-page-submit button{
+    width: 100%;
+    background-color: white;
+    cursor: pointer;
+    border: .1rem solid #213e53;
+    color: #213e53;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: .4rem;
+}
+
+.review-submit-section button:hover{
+    background-color: #213e53;
+    color: white;
+}
+
+/************************************************************************************************************************
+************************************************************************************************************************
+****************************************       Update User Profile   *************************************************/
+.update-page>p{
+    opacity:50%;
+    margin-top: .5rem;
+    font-size: 1.5rem;
+}
+
+.update-page input:focus{
+    border-color: #213e53;
+}
+
+.update-page label{
+    font-size: 1.5rem;
+}
+
+.update-general-information{
+    margin: 1rem;
+    border-top: .1rem solid #213e53;
+}
+
+.update-general-information h3{
+    color: #213e53;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    opacity: 50%;
+}
+
+.update-general-information input{
+    width: 100%;
+    margin-top: .5rem;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border: .1rem solid #ccc;
+    border-radius: .5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+/****** General Information Section One
+*/
+.user-general-information-one{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    padding: .5rem;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.general-information-section-three{
+    border: .1rem dashed #213e53;
+    text-align: center;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.file-image-upload img{
+    padding: 1rem;
+}
+
+.file-image-upload-btn{
+    margin-top: 1rem;
+}
+
+.file-image-upload-btn button{
+    padding: .5rem;
+    background-color: white;
+    border: .1rem solid #213e53;
+    border-radius: .5rem;
+    color: #213e53;
+    cursor: pointer;
+}
+
+.file-image-upload-btn button:hover, .user-education-years button:hover{
+    color: white;
+    background-color: #213e53;
+}
+
+.file-image-upload-btn button i{
+    margin-right: 1rem;
+}
+
+/****** General Information Section Two
+*/
+.user-general-information-two{
+    border-top: .1rem solid #213e53;
+}
+
+.git-password-update-section{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 1rem;
+}
+
+/****** General Information Section Three
+*/
+.user-general-information-three{
+    border-top: .1rem solid #213e53;
+}
+
+.user-education{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 1rem;
+}
+.user-education input, .user-education-years select, .user-education-years button{
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: .5rem 0 1.5rem 0;
+    border-radius: .5rem;
+}
+
+.user-education-years{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-education-years button, .user-education-years select{
+    border: .1rem solid #213e53;
+    background-color: white;
+    cursor: pointer;
+}
+
+.user-education-years button{color: #213e53}
+
+.user-bio-description-skills{
+    border-top: .1rem solid #213e53;
+}
+.user-bio-description-skills-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+}
+
+.user-bio-description-skills-one textarea {
+    width: 100%;
+    height: 10vh;
+    border: .1rem solid #213e53;
+    box-shadow: 0 1px 0 0 #213e53;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-family: "Times New Roman", Times, serif;
+    border-radius: .5rem;
+}
+
+.user-bio-description-skills-two-container{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 1rem 0;
+}
+
+.user-bio-description-skills-two-container input{
+    padding: 1rem;
+    margin: 0;
+}
+
+.user-bio-description-skills-two-container button{
+    cursor: pointer;
+    background-color: white;
+    border: .1rem solid #213e53;
+    color: #213e53;
+    border-radius: .5rem;
+}
+
+.user-bio-description-skills-two-container button:hover{
+    background-color: #213e53;
+    color: white;
+}
+
+.update-page-submit{
+    border-top: .1rem solid #213e53;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.update-page-submit button{
+    color: white;
+    background-color: #213e53;
+}
+
+.update-page-submit button:hover{
+    color: white;
+    background-color: #091b28;
+}
