@@ -38,6 +38,7 @@ router.post('/join', function (req, res) {
   let fields_errors = InputsValidation.allFieldsCheck();
 
   console.log(req.body);
+  console.log(UserModel);
 
   if(fields_errors.length>0){
     // An error has occurred
