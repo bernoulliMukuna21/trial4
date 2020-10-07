@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 let MongoClient = require('mongodb').MongoClient;
 
 let mongoURI = process.env.MONGODB_URI|| 'mongodb://localhost:27017/excellence';
+//let mongoURI = 'mongodb+srv://bernoulliMukuna21:reJ2YhAXrv6mhMW@stickler-zmx1n.mongodb.net/test?authSource=admin&replicaSet=Stickler-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true';
 
 mongoose
     .connect(
