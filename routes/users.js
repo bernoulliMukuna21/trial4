@@ -33,10 +33,11 @@ router.get('/forgot', function (req, res, next) {
 // Sign Up users to the database
 router.post('/join', function (req, res) {
 
-  //console.log()
   let {name, username, email, password, password2} = req.body;
   let InputsValidation = new fieldInputCheck.InputsValidation(name, username, email, password, password2);
   let fields_errors = InputsValidation.allFieldsCheck();
+
+  console.log(req.body);
 
   if(fields_errors.length>0){
     // An error has occurred
