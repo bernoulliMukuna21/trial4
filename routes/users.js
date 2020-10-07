@@ -51,8 +51,10 @@ router.post('/join', function (req, res) {
       password2
     })
   }else{
+    console.log('No error committed');
     UserModel.findOne({email:email})
         .then(user=>{
+          console.log(user)
           if(user){
             // The user is in the database
             fields_errors = [{label:'user', message:'Email is already being used!'}]
