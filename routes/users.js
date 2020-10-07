@@ -79,10 +79,9 @@ router.post('/join', function (req, res) {
                     res.send(err)
                   });
             }));
-
           }
         })
-        .catch(err=>handleError(error))
+        .catch(err=>console.log(err))
   }
 });
 
