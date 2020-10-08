@@ -5,9 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 let MongoClient = require('mongodb').MongoClient;
-
+require('dotenv').config();
 //let mongoURI = process.env.MONGODB_URI|| 'mongodb://localhost:27017/excellence';
-let mongoURI = 'mongodb+srv://bernoulliMukuna21:reJ2YhAXrv6mhMW@stickler-zmx1n.mongodb.net/excellence_freelance?authSource=admin&replicaSet=Stickler-shard-0&readPreference=primary&appname=MongoDB%20Compass%20Community&ssl=true';
+let mongoURI = process.env.mongoURI;
 console.log('############################################ Mongo Connection #############################################################')
 mongoose.connect(
         mongoURI,
